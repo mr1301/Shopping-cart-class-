@@ -71,8 +71,11 @@ products = [
 #A friendly message thanking the customer and/or encouraging the customer to shop again.
 
 #Information input
-
-selected_id = input("Please input a product identifier") #9 is str
-match_products = [p for p in products if str(p["id"]) == str(selected_id)]
-match_product=match_products[0]
-print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
+while True:
+  selected_id = input("Please input a product identifier")  #9 is str
+  if selected_id == "done":
+    break
+  else:
+    match_products = [p for p in products if str(p["id"]) == str(selected_id)]
+    match_product=match_products[0]
+    print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
