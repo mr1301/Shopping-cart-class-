@@ -1,9 +1,7 @@
 import datetime
 t =  datetime.datetime.now() #copy past datetimenow from repo
-print(t)
-print("the time is: " + str(t))
 
-print(t.strftime("%Y-%m-%d "))
+#print(t.strftime("%Y-%m-%d "))
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -71,6 +69,9 @@ products = [
 #A friendly message thanking the customer and/or encouraging the customer to shop again.
 
 #Information input
+
+
+
 total_price = 0
 selected_ids = []
 while True:
@@ -84,13 +85,29 @@ while True:
     #print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
      selected_ids.append(selected_id)
 
-
+print("                             ")
+print("                             ")
+print("-----------------------------")
+print("THE SOUP BOWL - GEORGETOWN   ")
+print("202-997-0229", "WWW.TSB.COM  ")
+print("THE TIME IS: " + str(t)+ "   ")
+print("-----------------------------")
+print("SELECTED PRODUCTS:           ")
+print("-----------------------------")
 
 #print(selected_ids)
 for selected_id in selected_ids:
   match_products = [p for p in products if str(p["id"]) == str(selected_id)]
   match_product = match_products[0]
   total_price = total_price + match_product["price"]
-  print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
+  print(match_product["name"] + " " + str(match_product["price"]))
 
-print("Total Price: " + str(total_price))
+print("-----------------------------")
+print("SUB-TOTAL: " + str(total_price))
+Tax = (total_price* 0.06)
+print("TOTAL-TAX  " + str(Tax))
+Total_Pay = total_price + Tax
+print("TOTAL-PAY  " + str(Total_Pay))
+print("-----------------------------  ")
+print("THANK YOU,", "SEE YOU AGAIN SOON")
+print("-----------------------------  ")
