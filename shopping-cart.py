@@ -72,11 +72,7 @@ products = [
 
 #Information input
 
-selected_id = input("Please input a product identifier")
-print(selected_id)
-print(type(selected_id))
-
-
-
-
-#information output
+selected_id = input("Please input a product identifier") #9 is str
+match_products = [p for p in products if str(p["id"]) == str(selected_id)]
+match_product=match_products[0]
+print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
