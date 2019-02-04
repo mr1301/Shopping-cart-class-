@@ -10,6 +10,7 @@ now = datetime.datetime.now()
 
 #print("CHECK OUT AT", now.strftime("%Y-%m-%d"), now.strftime("%H:%M:%S"), "AM")
 
+#**************** Above = Time Module, Below = Inputs*******************
 products = [
     {"id": 1, "name": "Chocolate Sandwich Cookies",
         "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -56,9 +57,8 @@ products = [
 # TODO: write some Python code here to produce the desired functionality...
 #print(products)
 
+#**************class notes shopping-cart *************************************************
 
-
-#**************class notes shopping-cart ***********************
 #for p in products:
  # print (p)
 #x = 3 #when x is 3 the loop will execute infinitely because x will always be 3
@@ -89,7 +89,7 @@ products = [
 #Filteringlists
 #accumulators and counters
 
-#***************************** Instructions*****************
+#***************************** Instructions***************************************************
 #A grocery store name of your choice.
 #A grocery store phone number and/or website URL and/or address of choice.
 #The date and time of the beginning of the checkout process, formatted in a human-friendly way.
@@ -100,10 +100,7 @@ products = [
 #A friendly message thanking the customer and/or encouraging the customer to shop again.
 
 
-#********* Information input ******************************
-
-#
-
+#********* Information input ******************************************************************
 
 total_price = 0
 selected_ids = []
@@ -117,7 +114,8 @@ while True:
     #total_price = total_price + match_product["price"]
     #print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
      selected_ids.append(selected_id)
-#******************Information Output***********************************
+
+#******************Information Output*************************************************************
 
 print("                             ")
 print("                             ")
