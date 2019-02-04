@@ -100,14 +100,14 @@ for selected_id in selected_ids:
   match_products = [p for p in products if str(p["id"]) == str(selected_id)]
   match_product = match_products[0]
   total_price = total_price + match_product["price"]
-  print(match_product["name"] + " " + str(match_product["price"]))
+  print(match_product["name"] + " " + "${0:.2f}".format(match_product["price"]))
 
 print("-----------------------------")
-print("SUB-TOTAL: " + str(total_price))
+print("SUB-TOTAL: ${0:.2f}".format(total_price))
 Tax = (total_price* 0.06)
-print("TOTAL-TAX  " + str(Tax))
+print("TOTAL-TAX: ${0:.2f}".format(Tax))
 Total_Pay = total_price + Tax
-print("TOTAL-PAY  " + str(Total_Pay))
+print("TOTAL-PAY: ${0:.2f}".format(Total_Pay))
 print("-----------------------------  ")
 print("THANK YOU,", "SEE YOU AGAIN SOON")
 print("-----------------------------  ")
