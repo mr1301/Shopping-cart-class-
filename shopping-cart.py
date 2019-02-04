@@ -72,16 +72,25 @@ products = [
 
 #Information input
 total_price = 0
+selected_ids = []
 while True:
   selected_id = input("Please input a product identifier")  #9 is str
   if selected_id == "done":
     break
   else:
-    match_products = [p for p in products if str(p["id"]) == str(selected_id)]
-    match_product = match_products[0]
-    total_price = total_price + match_product["price"]
-    print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
+    #match_products = [p for p in products if str(p["id"]) == str(selected_id)]
+    #match_product = match_products[0]
+    #total_price = total_price + match_product["price"]
+    #print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
+     selected_ids.append(selected_id)
 
 
+
+#print(selected_ids)
+for selected_id in selected_ids:
+  match_products = [p for p in products if str(p["id"]) == str(selected_id)]
+  match_product = match_products[0]
+  total_price = total_price + match_product["price"]
+  print("Selected Product: " + match_product["name"] + " " + str(match_product["price"]))
 
 print("Total Price: " + str(total_price))
