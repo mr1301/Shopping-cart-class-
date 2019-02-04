@@ -69,3 +69,14 @@ products = [
 #The amount of tax owed, calculated by multiplying the total cost by a District of Columbia sales tax rate of 6%.
 #The total amount owed, formatted as US dollars and cents (e.g. $4.77), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items.
 #A friendly message thanking the customer and/or encouraging the customer to shop again.
+
+#Information input
+
+selected_id = input("Please input a product identifier")
+print(selected_id)
+print(type(selected_id))
+
+
+
+
+#information output
